@@ -1,5 +1,6 @@
 vector<int> leftView(Node *node)
 {
+   
             vector<int>ans;
           if(node==nullptr)
           return ans;
