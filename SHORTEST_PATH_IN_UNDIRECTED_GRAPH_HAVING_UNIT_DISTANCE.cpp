@@ -1,11 +1,6 @@
 #include<bits/stdc++.h>
-
 using namespace std;
-
-
 vector<int> shortestPath(vector<vector<int>>& edges, int N,int M, int src){
-        
-        
            vector<int>adj[N];
            for(int i=0;i<edges.size();i++)
            {
