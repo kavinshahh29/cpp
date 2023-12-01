@@ -110,22 +110,6 @@ class Solution {
 
 // USING DISJOINT SET UNION 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 int find(int node,vector<int>&parent)
    {
        if(node==parent[node])
