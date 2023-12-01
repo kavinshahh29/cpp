@@ -100,3 +100,60 @@ vector<int> shortestPath(int N,int M, vector<vector<int>>& edges){
         
        
      }
+
+
+
+
+
+
+
+
+
+     // USING PRIORITY QUEUE 
+
+
+
+      vector<int> shortestPath(int N,int M, vector<vector<int>>& edges){
+         
+           
+            vector<int>dist(N,INT_MAX);
+            dist[0]=0;
+            typedef pair<int,int>p;
+            priority_queue<p,vector<p>,greater<p>>pq;
+            pq.push({0,0});
+            while(!pq.empty())
+            {
+                int d=pq.top().first;
+                int src=pq.top().second;
+                pq.pop();
+                for(int i=0;i<edges.size();i++)
+                {
+                    if(edges[i][0]==src)
+                    {
+                        int node=edges[i][1];
+                        int wt=edges[i][2];
+                        if(dist[node]>wt+d)
+                        {
+                            dist[node]=wt+d;
+                            pq.push({wt+d,node});
+                            
+                        }
+                    }
+                }
+
+                
+            }
+            
+            for(int i=0;i<N;i++)
+            {
+                if(dist[i]==INT_MAX)
+                dist[i]=-1;
+                
+            }
+            
+            return dist;
+            
+         
+    
+         
+     }
