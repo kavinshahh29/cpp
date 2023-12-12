@@ -1,7 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
-
-
+struct Item{
+    int value;
+    int weight;
+};
  double fractionalKnapsack(int W, Item arr[], int n)
     {
         double profit=0;
